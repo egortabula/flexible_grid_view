@@ -78,7 +78,6 @@ class FlexibleGridView extends StatelessWidget {
       controller: controller,
       padding: padding,
       reverse: reverse,
-
       itemCount: (children.length / axisCount.value).ceil(),
       itemBuilder: (context, index) {
         int startingIndex = index * axisCount.value;
