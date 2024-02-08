@@ -45,6 +45,9 @@ class FlexibleGridView extends StatelessWidget {
   /// Whether the grid should be allowed to shrink-wrap its contents.
   final bool shrinkWrap;
 
+  /// Whether the listview primary or ont.
+  final bool primary;
+
   /// The physics of the scrollable widget.
   final ScrollPhysics? physics;
 
@@ -64,6 +67,7 @@ class FlexibleGridView extends StatelessWidget {
     this.crossAxisSpacing = 8,
     this.mainAxisSpacing = 8,
     this.shrinkWrap = false,
+    this.primary = false,
     this.physics,
     this.controller,
     this.padding,
@@ -74,6 +78,7 @@ class FlexibleGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       shrinkWrap: shrinkWrap,
+      primary: primary,
       physics: physics,
       controller: controller,
       padding: padding,
